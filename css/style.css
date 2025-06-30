@@ -1,0 +1,166 @@
+:root {
+    --primary-green: #285943; /* Verde oscuro, corporativo y natural */
+    --light-bg: #F9F9F9; /* Un blanco roto muy sutil */
+    --text-dark: #333333;
+    --text-muted: #6c757d;
+    --border-color: #dee2e6;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Offset for fixed navbar */
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    color: var(--text-dark);
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.py-6 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* --- NAVIGATION --- */
+.navbar {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    transition: all 0.3s ease-in-out;
+}
+.navbar-scrolled {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.navbar .nav-link {
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+.navbar .nav-link:hover {
+    color: var(--primary-green);
+}
+.navbar-scrolled .nav-link {
+    color: #222 !important;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/HeroBG-1.png') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+}
+.hero-title {
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+.hero-subtitle {
+    max-width: 600px;
+    opacity: 0.9;
+}
+
+/* --- BUTTONS --- */
+.btn {
+    padding: 12px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+.btn-primary {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #1e4231;
+    border-color: #1e4231;
+    transform: translateY(-3px);
+}
+
+/* --- SECTIONS --- */
+.section-title {
+    font-weight: 700;
+    color: var(--text-dark);
+}
+.bg-light {
+    background-color: var(--light-bg) !important;
+}
+
+/* --- TRUSTED BY SECTION --- */
+.partner-logo {
+    height: 30px;
+    margin: 1rem 1.5rem;
+    filter: grayscale(100%);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+.partner-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* --- FEATURES & BENEFITS --- */
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    background-color: #e8f5e9; /* Light green */
+    color: var(--primary-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+.benefit-item i {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+/* --- SOLUTIONS SECTION --- */
+.badge.bg-primary-soft {
+    background-color: #e8f5e9;
+    padding: 0.5em 1em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.specs-list {
+    list-style: none;
+    padding-left: 0;
+}
+.specs-list li {
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 0.75rem;
+}
+.specs-list li::before {
+    content: '\F26E'; /* Bootstrap Icon for check-circle-fill */
+    font-family: 'bootstrap-icons';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--primary-green);
+}
+
+/* --- CONTACT & FOOTER --- */
+.form-control-lg {
+    padding: 0.9rem 1.25rem;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+}
+.form-control-lg:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 0.25rem rgba(40, 89, 67, 0.25);
+}
+.footer {
+    background-color: #fff;
+    border-top: 1px solid #f0f0f0;
+}
