@@ -83,6 +83,19 @@ body {
     border-color: #1e4231;
     transform: translateY(-3px);
 }
+.btn-read-more {
+    background-color: #fcc82d;
+    color: #003828;
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 12px 32px;
+}
+.btn-read-more:hover {
+    background-color: #eab41c;
+    color: #003828;
+    transform: translateY(-3px);
+}
+
 
 /* --- SECTIONS --- */
 .section-title {
@@ -105,6 +118,22 @@ body {
     filter: grayscale(0%);
     opacity: 1;
 }
+
+/* --- CLIMATE PARTNER SECTION --- */
+.image-wrapper-climate {
+    display: inline-block;
+    background-color: #fcc82d; /* El color amarillo del borde */
+    padding: 20px; /* El grosor del borde */
+    border-radius: 240px 80px; /* Radios para la forma de la píldora */
+}
+
+.image-wrapper-climate img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 220px 60px; /* Un radio interior para la imagen */
+}
+
 
 /* --- FEATURES & BENEFITS --- */
 .icon-circle {
