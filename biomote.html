@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Favicon -->
-    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="icon" href="images/favicon.ico" type="image/png">
 </head>
 <body>
 
@@ -27,7 +27,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="#page-top">
-                <img src="images/logo-biomote.png" alt="BioMote Logo" height="40">
+                <img src="images/logo-biomote.png" alt="BioMote Logo" height="55" id="navbarLogo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -44,36 +44,25 @@
     </nav>
 
     <!-- HERO SECTION -->
-    <header class="hero-section d-flex align-items-center" id="page-top">
-        <div class="container text-center">
-            <h1 class="hero-title display-3">Energía que nace de tus residuos.</h1>
-            <p class="hero-subtitle lead mx-auto">Convierte los desechos orgánicos de tu hogar o negocio en gas para cocinar y fertilizante líquido con HomeBiogas.</p>
-            <a href="#features" class="btn btn-primary btn-lg mt-4">Descubrir Cómo</a>
-        </div>
-    </header>
-
-    <main>
-        <!-- SECCIÓN DE CONFIANZA (SOCIAL PROOF) -->
-        <section class="trusted-by-section py-5">
-            <div class="container">
-                <h6 class="text-center text-muted text-uppercase mb-4">Con la confianza de organizaciones líderes</h6>
-                <div class="d-flex flex-wrap justify-content-center align-items-center">
-                    <img src="img/logo-un.png" alt="Naciones Unidas" class="partner-logo">
-                    <img src="img/logo-usaid.png" alt="USAID" class="partner-logo">
-                    <img src="img/logo-wwf.png" alt="WWF" class="partner-logo">
-                    <img src="img/logo-cruz-roja.png" alt="Cruz Roja" class="partner-logo">
-                    <img src="img/logo-b-corp.png" alt="B Corporation" class="partner-logo">
-                </div>
-            </div>
-        </section>
+<header class="hero-section d-flex align-items-center" id="page-top">
+    <div class="overlay"></div> <!-- Overlay div -->
+    <div class="container text-center position-relative z-1"> <!-- Added position-relative and z-1 -->
+        <h1 class="hero-title display-3">Energía que nace de tus residuos.</h1>
+        <p class="hero-subtitle lead mx-auto">Convierte los desechos orgánicos de tu hogar o negocio en gas para cocinar y fertilizante líquido con HomeBiogas.</p>
+        <a href="#features" class="btn btn-primary btn-lg mt-4">Descubrir Cómo</a>
+    </div>
+</header>
+    
+    
+    <main>        
 
         <!-- SECCIÓN ALIADO CLIMÁTICO -->
-        <section class="climate-partner-section py-6" style="background-color: #fffbf0;">
+        <section class="climate-partner-section py-6" style="background-color: #f8f9fa;">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="image-wrapper-climate">
-                           <img src="images/climate-action-partner.png" class="img-fluid" alt="Sistema de biogás en un entorno rural">
+                           <img src="images/partner-climate.webp" class="img-fluid" alt="Sistema de biogás en un entorno rural">
                         </div>
                     </div>
                     <div class="col-lg-6 ps-lg-5 mt-5 mt-lg-0">
@@ -84,10 +73,44 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>   
+        
 
+        <!-- SECCIÓN SOLUCIÓN PARA AGRICULTORES -->
+        <section class="solution-farmer-section py-6" style="background-color: #f8f9fa;">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <h2>Nuestra Solución Completa</h2>
+                        <h2 class="display-5" style="color: #003828; font-weight: bold;">Para Agricultores</h2>
+                        <p class="text-secondary mt-4">El Sistema HomeBiogas para Agricultores es una solución duradera y eficiente diseñada para procesar estiércol animal y residuos orgánicos, proporcionando a las fincas energía renovable y valioso biofertilizante. Con una capacidad para procesar hasta 50 litros de estiércol animal diariamente, es una herramienta simple pero potente para la agricultura sostenible.</p>
+                        <ul class="list-unstyled mt-4">
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <span>Hasta 5 Horas de Gas para Cocinar</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <span>Daily Bio-Fertilizer Production</span>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                <span>Diseño Duradero</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-read-more mt-4">Read More</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="image-wrapper-farmer">
+                           <img src="images/solucion-agricultores.webp" class="img-fluid rounded-3" alt="Placeholder Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- SECCIÓN CÓMO FUNCIONA -->
         <section id="features" class="py-6">
+
             <div class="container">
                 <div class="text-center mb-5">
                     <h2 class="section-title">Un ciclo perfecto en 3 simples pasos.</h2>
@@ -117,6 +140,23 @@
                 </div>
             </div>
         </section>
+        <!-- SECCIÓN REDUCE TU HUELLA DE CARBONO -->
+        <section class="carbon-footprint-section py-6" style="background-color: #fff;">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <h2 class="display-5" style="color: #003828; font-weight: bold;">Reduce tu huella de carbono con<br>el Estándar de Oro (Gold Standard)</h2>
+                        <p class="text-secondary mt-4">Los proyectos HomeBiogas generan créditos de carbono certificados, verificados por los estándares líderes a nivel mundial como Gold Standard. Esto significa que al apoyar o implementar una solución HomeBiogas, estás contribuyendo directamente a la reducción de emisiones de gases de efecto invernadero y ayudando a combatir el cambio climático.</p>
+                        <a href="#" class="btn btn-read-more mt-4">Compensa tu Huella</a>
+                    </div>
+                    <div class="col-lg-6">
+                         <div class="image-wrapper-carbon">
+                            <img src="images/homebiogas-certicado.png" class="img-fluid rounded-3" alt="Placeholder image for carbon footprint section">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- SECCIÓN SOLUCIONES (PRODUCTOS) -->
         <section id="solutions" class="py-6 bg-light">
@@ -128,7 +168,7 @@
                 <!-- Solución 1: Hogares -->
                 <div class="row align-items-center g-5 mb-5">
                     <div class="col-lg-6">
-                        <img src="https://placehold.co/600x450/e8f5e9/333" class="img-fluid rounded-3" alt="Familia en un jardín con HomeBiogas">
+                        <img src="images/homebiogas-2-4-c.png" class="img-fluid rounded-3" alt="Familia en un jardín con HomeBiogas">
                     </div>
                     <div class="col-lg-6">
                         <span class="badge bg-primary-soft text-primary mb-2">HOGARES Y COMUNIDADES</span>
@@ -145,7 +185,7 @@
                 <!-- Solución 2: Agricultores -->
                 <div class="row align-items-center g-5">
                     <div class="col-lg-6 order-lg-2">
-                        <img src="https://placehold.co/600x450/dcedc8/333" class="img-fluid rounded-3" alt="Campo agrícola con sistema HomeBiogas">
+                        <img src="images/homebiogas-6-8.png" class="img-fluid rounded-3" alt="Campo agrícola con sistema HomeBiogas">
                     </div>
                     <div class="col-lg-6 order-lg-1">
                         <span class="badge bg-primary-soft text-primary mb-2">NEGOCIOS Y AGRICULTURA</span>
@@ -192,9 +232,22 @@
                 </div>
             </div>
         </section>
+        <!-- SECCIÓN DE CONFIANZA (SOCIAL PROOF) -->
+        <section class="trusted-by-section py-5 bg-light">
+            <div class="container">
+                <h6 class="text-center text-muted text-uppercase mb-4">Con la confianza de organizaciones líderes</h6>
+                <div class="d-flex flex-wrap justify-content-center align-items-center">
+                    <img src="images/logo-un.png" alt="Naciones Unidas" class="partner-logo">
+                    <img src="images/logo-usaid.png" alt="USAID" class="partner-logo">
+                    <img src="images/logo-wwf.png" alt="WWF" class="partner-logo">
+                    <img src="images/logo-cruz-roja.png" alt="Cruz Roja" class="partner-logo">                    
+                    <img src="images/logo-governmet.png" alt="Governmet of India" class="partner-logo">
+                </div>
+            </div>
+        </section>
 
         <!-- SECCIÓN DE CONTACTO (FINAL CTA) -->
-        <section id="contact" class="py-6 bg-light">
+        <section id="contact" class="py-6">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
@@ -215,14 +268,43 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>        
     </main>
-
+    
     <!-- FOOTER -->
-    <footer class="footer py-4">
-        <div class="container text-center">
-            <p class="mb-0">© 2024 BioMote. Todos los derechos reservados.</p>
-            <p class="text-muted small">Distribuidor Oficial de HomeBiogas en Paraguay.</p>
+    <footer class="footer py-6">
+        <div class="container">
+            <div class="row justify-content-between g-4">
+                <div class="col-lg-4">
+                    <img src="/images/logo-biomote.png" alt="BioMote Logo" height="60" class="mb-3">
+                    <p class="text-muted">La revolución de la energía sostenible en Paraguay. Distribuidor Oficial de HomeBiogas.</p>
+                     <div class="social-icons mt-4">
+                        <a href="#" class="social-icon me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-heading mb-3">Navegación</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#features">Cómo Funciona</a></li>
+                        <li><a href="#solutions">Soluciones</a></li>
+                        <li><a href="#benefits">Beneficios</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="footer-heading mb-3">Contacto</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="mailto:info@biomote.com">info@biomote.com</a></li>
+                        <li><a href="tel:+595981234567">(+595) 981 234 567</a></li>
+                         <li><span>Asunción, Paraguay</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12 text-center"><p class="mb-0 text-muted">&copy; 2024 BioMote. Todos los derechos reservados.</p></div>
+            </div>
         </div>
     </footer>
 
@@ -237,6 +319,16 @@
                 nav.classList.add('navbar-scrolled');
             } else {
                 nav.classList.remove('navbar-scrolled');
+            }
+        });
+    </script>
+    <script>
+        window.addEventListener('scroll', function() {
+            const logo = document.getElementById('navbarLogo');
+            if (window.scrollY > 50) {
+                logo.src = 'images/logo-biomote-b.png';
+            } else {
+                logo.src = 'images/logo-biomote.png';
             }
         });
     </script>

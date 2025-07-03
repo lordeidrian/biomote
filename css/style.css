@@ -1,6 +1,6 @@
 :root {
-    --primary-green: #285943; /* Verde oscuro, corporativo y natural */
-    --light-bg: #F9F9F9; /* Un blanco roto muy sutil */
+    --primary-green: #003a46; /* Nuevo verde oscuro */
+    --light-bg: #f9f9f9; /* Un blanco roto muy sutil */
     --text-dark: #333333;
     --text-muted: #6c757d;
     --border-color: #dee2e6;
@@ -51,7 +51,7 @@ body {
 
 /* --- HERO SECTION --- */
 .hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/HeroBG-1.png') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/HeroBG-1.png') no-repeat center center;
     background-size: cover;
     min-height: 100vh;
     color: white;
@@ -85,8 +85,8 @@ body {
 }
 .btn-read-more {
     background-color: #fcc82d;
-    color: #003828;
-    font-weight: bold;
+    color: var(--primary-green);
+    font-weight: 700;
     border-radius: 50px;
     padding: 12px 32px;
 }
@@ -108,10 +108,10 @@ body {
 
 /* --- TRUSTED BY SECTION --- */
 .partner-logo {
-    height: 30px;
-    margin: 1rem 1.5rem;
-    filter: grayscale(100%);
-    opacity: 0.5;
+    width: auto; /* Let width be determined by height */
+    height: 100px; /* Set a fixed height for consistency */
+    margin: 1rem 2.5rem;
+    opacity: 0.8;
     transition: all 0.3s ease;
 }
 .partner-logo:hover {
@@ -186,10 +186,74 @@ body {
     border: 1px solid #ced4da;
 }
 .form-control-lg:focus {
-    border-color: var(--primary-green);
-    box-shadow: 0 0 0 0.25rem rgba(40, 89, 67, 0.25);
+    border-color: var(--primary-green);    box-shadow: 0 0 0 0.25rem rgba(40, 89, 67, 0.25);
 }
 .footer {
-    background-color: #fff;
-    border-top: 1px solid #f0f0f0;
+    background-color: var(--primary-green);
+    color: #fff; /* Asegura que el color de texto general sea blanco */
+    padding-top: 60px;
+    padding-bottom: 40px;
+    border-top-left-radius: 50px; /* Esquinas redondeadas */
+    border-top-right-radius: 50px; /* Esquinas redondeadas */
+    overflow: hidden; /* Necesario para que el border-radius funcione con el fondo */
+    font-size: 0.9rem;
+    font-weight: 600; /* Aplica semi-bold a todo el footer por defecto */
 }
+
+.footer h5 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+    font-weight: 600; /* Asegura que los items de lista sean semi-bold */
+}
+
+.footer ul li a {
+    color: #fff; /* Asegura que los enlaces sean blancos */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    opacity: 1; /* Remueve la opacidad sutil para blanco completo */
+}
+
+.footer ul li a:hover {
+    opacity: 0.8; /* Ligeramente más transparente al pasar el ratón */
+}
+
+/* Sobrescribe la clase .text-muted para el footer */
+.footer .text-muted {
+    color: #fff !important; /* Fuerza el color blanco */
+    font-weight: 600; /* Fuerza semi-bold */
+}
+
+.footer .footer-section {
+    margin-bottom: 30px;
+}
+
+.footer .footer-section h5 {
+    margin-bottom: 15px;
+}
+
+.footer .social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+.footer .text-white.font-weight-semi-bold {
+    color: white;
+    font-weight: 400;
+}
+
+.footer .text-white {
+    color: white;
+}
+
+
+/* Add more specific footer styles here as needed based on the image */
