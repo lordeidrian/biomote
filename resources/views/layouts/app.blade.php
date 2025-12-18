@@ -14,32 +14,36 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
+
     <!-- Custom CSS (El estilo minimalista) -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('images/favicon.ico') }}" type="image/png">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-75J733M495"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-75J733M495');
-    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WRSMRBN9');</script>
+    <!-- End Google Tag Manager -->
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRSMRBN9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <nav class="navbar navbar-expand-lg {{ request()->routeIs('home') ? 'navbar-dark' : 'navbar-light navbar-scrolled' }} fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="{{ route('home') }}">
                 <img src="{{ request()->routeIs('home') ? asset('images/logo-biomote.png') : asset('images/logo-biomote-b.png') }}" alt="BioMote Logo" height="55" id="navbarLogo">
             </a>
-            
+
             <button class="navbar-toggler" type="button" id="menuToggler">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
+
             <div class="collapse navbar-collapse justify-content-end" id="desktopNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Inicio</a></li>
@@ -47,29 +51,29 @@
                     <li class="nav-item"><a class="nav-link" href="{{ route('products.index') }}">Productos</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('faqs') }}">Preguntas Frecuentes</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('videos.index') }}">Videos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('blog.index') }}">Blog</a></li>                    
+                    <li class="nav-item"><a class="nav-link" href="{{ route('blog.index') }}">Blog</a></li>
                     <li class="nav-item ms-lg-3">
                         <a class="btn btn-primary" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contacto</a>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav>    
+    </nav>
     <div class="mobile-menu-overlay" id="mobileMenu">
         <button class="close-btn" id="closeMenuBtn">&times;</button>
         <div class="overlay-content">
             <a href="{{ route('home') }}">Inicio</a>
             <a href="{{ route('about') }}">Nosotros</a>
-            <a href="{{ route('products.index') }}">Productos</a>            
+            <a href="{{ route('products.index') }}">Productos</a>
             <a href="{{ route('faqs') }}">Preguntas frecuentes</a>
             <a href="{{ route('videos.index') }}">Videos</a>
-            <a href="{{ route('blog.index') }}">Blog</a>            
+            <a href="{{ route('blog.index') }}">Blog</a>
             <a class="btn btn-primary" style="color: #f9f9f9;" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contacto</a>
         </div>
     </div>
 
     @yield('content')
-    
+
     <!-- Minichat whatsapp -->
     <div class="floating-widget-container">
         <!-- Contenedor específico para WhatsApp -->
@@ -90,16 +94,16 @@
                         </div>
                     </a>
                 </div>
-            </div>    
+            </div>
             <button class="whatsapp-trigger-btn" id="whatsappTriggerBtn" title="Chatea con nosotros">
                 <i class="bi bi-whatsapp"></i>
             </button>
         </div>
-        
+
         <button id="scrollToTopBtn" class="scroll-to-top-btn" title="Volver arriba">
             <i class="bi bi-chevron-up"></i>
         </button>
-    
+
     </div>
 
     <!-- FOOTER -->
@@ -159,7 +163,7 @@
                                 <i class="bi bi-whatsapp me-2"></i>+595 994 354817
                             </a>
                         </div>
-                    </div>    
+                    </div>
 
                     <div class="col-md-6">
                         <div class="contact-option text-center">
