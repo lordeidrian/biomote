@@ -28,8 +28,8 @@
                         <div class="card h-100 shadow-sm border-0 rounded-3 overflow-hidden video-card">
                             <div class="ratio ratio-16x9">
                                 @if($video->youtube_id)
-                                    <iframe src="https://www.youtube.com/embed/{{ $video->youtube_id }}" 
-                                            title="{{ $video->title }}" 
+                                    <iframe src="https://www.youtube.com/embed/{{ $video->youtube_id }}"
+                                            title="{{ $video->title }}"
                                             allowfullscreen
                                             class="rounded-top"></iframe>
                                 @else
@@ -39,7 +39,7 @@
                                 @endif
                             </div>
                             <div class="card-body p-4">
-                                <h5 class="card-title fw-bold text-primary mb-2">{{ $video->title }}</h5>
+                                <h5 class="card-title fw-bold text-dark mb-2">{{ $video->title }}</h5>
                                 @if($video->description)
                                     <p class="card-text text-muted small">{{ Str::limit($video->description, 100) }}</p>
                                 @endif
