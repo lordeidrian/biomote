@@ -25,6 +25,14 @@
                                 {{ session('success') }}
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
+                            <script>
+                            window.dataLayer = window.dataLayer || [];
+                            dataLayer.push({
+                                event: 'biomote_form_success',
+                                lead_source: @json($campaign->slug),
+                                campaign_id: @json($campaign->id)
+                            });
+                            </script>
                         @endif
 
                         <form action="{{ route('contact.submit') }}" method="POST" id="contactForm">
@@ -174,7 +182,7 @@
                             document.addEventListener('DOMContentLoaded', function() {
                                 const activityType = document.getElementById('activity_type');
                                 const allOptions = document.querySelectorAll('.activity-options');
-                                
+
                                 function updateActivityOptions() {
                                     // Ocultar todas las opciones
                                     allOptions.forEach(option => {
@@ -185,7 +193,7 @@
                                             checkbox.checked = false;
                                         });
                                     });
-                                    
+
                                     // Mostrar solo las opciones relevantes
                                     const selectedType = activityType.value;
                                     if (selectedType === 'ganadería') {
@@ -196,10 +204,10 @@
                                         document.getElementById('mixto-options').style.display = 'block';
                                     }
                                 }
-                                
+
                                 // Actualizar al cambiar la selección
                                 activityType.addEventListener('change', updateActivityOptions);
-                                
+
                                 // Ejecutar al cargar la página (para valores anteriores)
                                 updateActivityOptions();
                             });
