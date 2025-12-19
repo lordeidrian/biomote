@@ -8,14 +8,14 @@
             <h1 class="hero-title display-3">Energía que nace de tus residuos.</h1>
             <p class="hero-subtitle lead mx-auto">Convierte los desechos orgánicos de tu hogar o negocio en gas para cocinar y fertilizante líquido con HomeBiogas.</p>
         </div>
-    
-        <div class="scroll-indicator" id="scrollIndicator"> 
+
+        <div class="scroll-indicator" id="scrollIndicator">
             <i class="bi bi-mouse scroll-mouse-animation"></i>
             <i class="bi bi-chevron-double-down scroll-arrows-animation"></i>
         </div>
     </header>
-    
-    <main>        
+
+    <main>
         <!-- SECCIÓN ALIADO CLIMÁTICO -->
         <section id="aliado-seccion" class="climate-partner-section section-spacing" style="background-color: #f8f9fa;">
             <div class="container">
@@ -33,7 +33,7 @@
                     </div>
                 </div>
             </div>
-        </section>           
+        </section>
 
         <!-- SECCIÓN SOLUCIÓN PARA AGRICULTORES -->
         <section class="solution-farmer-section section-spacing" style="background-color: #f8f9fa; padding-top: 0px;">
@@ -100,7 +100,7 @@
                                 <h3 class="h5 mt-3" style="color: var(--primary-green);">3. Nutre tus Plantas</h3>
                                 <p class="text-muted">Obtén un biofertilizante líquido, rico en nutrientes para tu huerto o jardín.</p>
                             </div>
-                        </div> 
+                        </div>
                         </div>
                 </div>
             </div>
@@ -206,15 +206,15 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-9">
                         <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-        
+
                             <div class="carousel-indicators">
                                 <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Testimonio 1"></button>
                                 <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Testimonio 2"></button>
                                 <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Testimonio 3"></button>
                             </div>
-        
+
                             <div class="carousel-inner">
-            
+
                                 <div class="carousel-item active">
                                     <div class="testimonial-item-floating">
                                         <img src="{{ asset('images/image_es.webp') }}" alt="Foto de la Familia Rivera" class="testimonial-avatar">
@@ -230,17 +230,17 @@
                                         </div>
                                     </div>
                                 </div>
-            
+
                                 <div class="carousel-item">
                                     <div class="testimonial-item-floating">
                                         <img src="{{ asset('images/image_br.webp') }}" alt="Foto de João da Silva" class="testimonial-avatar">
-                                        
+
                                         <p class="testimonial-quote">"O biofertilizante mudou a qualidade da minha horta. A produção aumentou e tudo é 100% orgânico. A tecnologia é robusta e o suporte, excelente."</p>
-                                        
+
                                         <!-- <a href="#" class="btn btn-sm btn-outline-primary mt-3 mb-4" data-bs-toggle="modal" data-bs-target="#videoModal" data-video-id="1OGAl4YAcc0">
                                             <i class="bi bi-play-btn-fill me-2"></i>Ver Testimonio en Video
                                         </a> -->
-        
+
                                         <div class="testimonial-author">
                                             <div class="author-name">João da Silva</div>
                                             <div class="author-location">
@@ -249,7 +249,7 @@
                                         </div>
                                     </div>
                                 </div>
-            
+
                                 <div class="carousel-item">
                                     <div class="testimonial-item-floating">
                                         <img src="{{ asset('images/image_ec.webp') }}" alt="Foto de Sofía Zambrano" class="testimonial-avatar">
@@ -265,7 +265,7 @@
                                         </div>
                                     </div>
                                 </div>
-            
+
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -332,32 +332,85 @@
         </section>
         <!-- SECCIÓN EMPRESAS ALIADAS (NUEVO) -->
         <section class="section-spacing">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="section-title">Empresas del sector biogás y energía renovable</h2>
-                </div>
-                <div class="row g-4 justify-content-center align-items-center">
-                    @for ($i = 1; $i <= 6; $i++)
-                    <div class="col-6 col-lg-2">
-                        <div class="partner-logo-wrapper">
-                            <a href="#" target="_blank">
-                                <img src="https://placehold.co/200x100?text=Empresa+{{ $i }}" alt="Empresa {{ $i }}" class="partner-logo">
-                            </a>
-                        </div>
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Presencia en Latinoamérica</h2>
+        </div>
+
+        @php
+            // "JSON" embebido (array PHP). Editar nombres, links e imágenes.
+            $partners = [
+                [
+                    'name' => 'Inventagri - Ecuador',
+                    'url'  => 'https://inventagri.com.ec/',
+                    'img'  => 'images/partners/ECO-INVENTAGRI.png',
+                ],
+                [
+                    'name' => 'Ecotrevim - Perú',
+                    'url'  => 'http://ecotrevim.com/',
+                    'img'  => 'images/partners/ECOTEVIM-LOGO.png',
+                ],
+                [
+                    'name' => 'Biomovement ambiental - Brasil',
+                    'url'  => 'http://mail.biomovement.com.br/',
+                    'img'  => 'images/partners/BIOMOVEMENT-AMBIENTAL.png',
+                ],
+                [
+                    'name' => 'BoxEnergy - Chile',
+                    'url'  => 'https://boxenergy.cl/',
+                    'img'  => 'images/partners/BOX-ENERGY-LOGO.png',
+                ],
+                [
+                    'name' => 'REVI - Colombia',
+                    'url'  => 'https://revi.com.co/',
+                    'img'  => 'images/partners/REVI-ENERGIA-LOGO.png',
+                ],
+                [
+                    'name' => 'HomeBiogas - Costa Rica',
+                    'url'  => 'https://www.homebiogascr.com/',
+                    'img'  => 'images/partners/HomeBiogas-logo.png',
+                ],
+                [
+                    'name' => 'CoEnergy -El Salvador',
+                    'url'  => 'https://coenergyelsalvador.com/',
+                    'img'  => 'images/partners/COENERGY-LOGO.png',
+                ],
+                [
+                    'name' => 'Cicloverde - Guatemala',
+                    'url'  => 'https://www.instagram.com/cicloverde.guatemala/',
+                    'img'  => 'images/partners/CICLO-VERDE-LOGO.png',
+                ],
+            ];
+        @endphp
+
+        <div class="row g-4 justify-content-center align-items-center">
+            @foreach ($partners as $partner)
+                {{-- 4 por fila: col-6 (2 por fila en mobile), col-lg-3 (4 por fila en desktop) --}}
+                <div class="col-6 col-lg-3">
+                    <div class="partner-logo-wrapper">
+                        <a href="{{ $partner['url'] }}" target="_blank" rel="noopener">
+                            <img
+                                src="{{ $partner['img'] }}"
+                                alt="{{ $partner['name'] }}"
+                                class="partner-logo"
+                                loading="lazy"
+                            >
+                        </a>
                     </div>
-                    @endfor
                 </div>
-            </div>
-        </section>
+            @endforeach
+        </div>
+    </div>
+</section>
 
         <!-- SECCIÓN DE CONFIANZA (SOCIAL PROOF) -->
-        <section class="section-spacing bg-light">
+        <section class="section-spacing">
             <div class="container">
                 <div class="text-center mb-5">
                     <h2 class="section-title">Con la confianza de organizaciones líderes</h2>
                 </div>
                 <div class="row g-4 justify-content-center align-items-center">
-        
+
                     <div class="col-6 col-lg-2">
                         <div class="partner-logo-wrapper">
                             <img src="{{ asset('images/logo-un.png') }}" alt="Naciones Unidas" class="partner-logo">
@@ -388,25 +441,25 @@
                              <img src="{{ asset('images/logo-b-corp.webp') }}" alt="Bcorp" class="partner-logo">
                         </div>
                     </div>
-        
+
                 </div>
             </div>
         </section>
 
         <!-- SECCIÓN DE CONTACTO (FINAL CTA) -->
-        <section id="contact" class="section-spacing">
+        <section id="contact" class="section-spacing bg-light">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
                     <h2 class="section-title mb-4">Únete a la revolución sostenible.</h2>
                     <p class="lead text-muted mb-2">Estamos aquí para asesorarte. Contáctanos para encontrar la solución perfecta para ti.</p>
-                        
+
                         <a href="mailto:info@biomote.com.py" class="btn btn-primary btn-lg">Quiero más información</a>
 
 
                     </div>
                 </div>
             </div>
-        </section>        
+        </section>
     </main>
 @endsection
