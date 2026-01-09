@@ -28,6 +28,17 @@ class CampaignController extends Controller
 
         return redirect()->route('home');
     }
+    public function qr()
+    {
+        $campaign = Campaign::firstOrCreate(
+            ['slug' => 'qr'],
+            ['name' => 'QR Campaign']
+        );
+
+        $campaign->increment('visit_count');
+
+        return view('campaigns.qr', compact('campaign'));
+    }
 
     public function submit(Request $request)
     {
@@ -49,7 +60,7 @@ class CampaignController extends Controller
             \Illuminate\Support\Facades\Mail::send(new \App\Mail\ContactCampaignSubmission($submission));
         } catch (\Exception $e) {
             // Log error or just continue, we don't want to break the user flow if mail fails
-            \Illuminate\Support\Facades\Log::error('Failed to send contact email: ' . $e->getMessage());
+            \Illuminate\Support\Facades\Log::error('Failed to send contact email: '.$e->getMessage());
         }
 
         return back()->with('success', '¡Gracias por contactarnos! Tu mensaje ha sido recibido.');

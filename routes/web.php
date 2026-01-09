@@ -29,5 +29,6 @@ Route::get('/videos', [VideoController::class, 'index'])->name('videos.index');
 use App\Http\Controllers\CampaignController;
 Route::post('/contact/submit', [CampaignController::class, 'submit'])->name('contact.submit');
 Route::get('/propuesta', [CampaignController::class, 'propuesta'])->name('campaign.propuesta');
+Route::get('/qr', [CampaignController::class, 'qr'])->name('campaign.qr');
 Route::get('/{slug}', [CampaignController::class, 'show'])->name('campaign.show');
 
