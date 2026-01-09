@@ -37,7 +37,7 @@ class CampaignController extends Controller
 
         $campaign->increment('visit_count');
 
-        return view('campaigns.qr', compact('campaign'));
+        return redirect()->route('home');
     }
 
     public function submit(Request $request)
