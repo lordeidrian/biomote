@@ -567,6 +567,27 @@ h6,
 
 }
 
+/* Responsive: ajuste para móvil */
+@media (max-width: 767.98px) {
+    .page-header {
+        min-height: 300px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .page-header .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .page-header .page-title {
+        font-size: 2rem;
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+        margin: 0 auto;
+    }
+}
+
 /* --- BREADCRUMB --- */
 .breadcrumb {
     background-color: transparent;
