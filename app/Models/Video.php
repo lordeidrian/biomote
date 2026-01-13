@@ -23,16 +23,32 @@ class Video extends Model
     public function getYoutubeIdAttribute()
     {
         $url = $this->youtube_url;
-        parse_str(parse_url($url, PHP_URL_QUERY), $args);
         
+        // Handle standard watch URLs: youtube.com/watch?v=ID
+        parse_str(parse_url($url, PHP_URL_QUERY), $args);
         if (isset($args['v'])) {
             return $args['v'];
         }
 
-        // Handle short URLs like youtu.be/ID
+        // Handle short URLs: youtu.be/ID
         if (strpos($url, 'youtu.be') !== false) {
              $path = parse_url($url, PHP_URL_PATH);
-             return substr($path, 1);
+             return trim($path, '/');
+        }
+
+        // Handle YouTube Shorts: youtube.com/shorts/ID
+        if (preg_match('/youtube\.com\/shorts\/([a-zA-Z0-9_-]+)/', $url, $matches)) {
+            return $matches[1];
+        }
+
+        // Handle embed URLs: youtube.com/embed/ID
+        if (preg_match('/youtube\.com\/embed\/([a-zA-Z0-9_-]+)/', $url, $matches)) {
+            return $matches[1];
+        }
+
+        // Handle /v/ URLs: youtube.com/v/ID
+        if (preg_match('/youtube\.com\/v\/([a-zA-Z0-9_-]+)/', $url, $matches)) {
+            return $matches[1];
         }
         
         return null;

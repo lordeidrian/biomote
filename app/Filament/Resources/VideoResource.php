@@ -25,7 +25,15 @@ class VideoResource extends Resource
                     ->maxLength(255),
                 Forms\Components\TextInput::make('youtube_url')
                     ->required()
-                    ->activeUrl()
+                    ->url()
+                    ->label('URL de YouTube')
+                    ->helperText('Acepta cualquier formato: youtube.com/watch?v=ID, youtube.com/shorts/ID, youtu.be/ID, etc.')
+                    ->rules([
+                        'regex:/^(https?:\/\/)?(www\.)?(youtube\.com\/(watch\?v=|shorts\/|embed\/|v\/)|youtu\.be\/)([a-zA-Z0-9_-]+)/',
+                    ])
+                    ->validationMessages([
+                        'regex' => 'Por favor, ingresa una URL válida de YouTube (incluyendo Shorts).',
+                    ])
                     ->maxLength(255),
                 Forms\Components\Textarea::make('description')
                     ->columnSpanFull(),
