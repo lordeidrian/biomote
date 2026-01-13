@@ -8,26 +8,32 @@
     --bs-btn-font-size: 1rem;
     --navbar-height: 90px;
 }
+
 @media (max-width: 991.98px) {
     :root {
-      --navbar-height: 105px;
+        --navbar-height: 105px;
     }
-  }
+}
 
-html, body {
+html,
+body {
     max-width: 100vw;
     overflow-x: hidden;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
-img, .img-fluid {
+img,
+.img-fluid {
     max-width: 100%;
     height: auto;
     display: block;
 }
+
 .footer .col-lg-4 img {
     width: 50% !important;
 }
@@ -40,7 +46,12 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 .page-title,
 .product-title,
 .section-title {
@@ -49,7 +60,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .text-secondary {
-    color: #003a46 !important; 
+    color: #003a46 !important;
 }
 
 .text-success {
@@ -61,17 +72,17 @@ h1, h2, h3, h4, h5, h6,
     padding-top: 30px;
     padding-bottom: 30px;
   } */
-  
-  /* * {
+
+/* * {
     outline: 1px solid red !important;
   } */
-  
+
 /* --- NAVIGATION --- */
 .navbar {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
     transition: background-color 0.3s, padding-top 0.3s, padding-bottom 0.3s;
-    
+
 }
 
 .navbar .container {
@@ -84,7 +95,7 @@ h1, h2, h3, h4, h5, h6,
     padding-bottom: 0.75rem;
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .navbar .nav-link {
@@ -94,14 +105,17 @@ h1, h2, h3, h4, h5, h6,
     padding-top: 20px;
     padding-bottom: 10px;
 }
+
 .navbar .nav-link:hover {
     color: #FFDA00;
 }
+
 .navbar-scrolled .nav-link {
     color: #222 !important;
     padding-top: 20px;
     padding-bottom: 8px;
 }
+
 .navbar-brand img {
     height: 55px;
 }
@@ -114,15 +128,17 @@ h1, h2, h3, h4, h5, h6,
     display: flex;
     flex-direction: column;
     justify-content: stretch;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     border: 1px solid #e8f5e9;
     background: #fff;
     transition: box-shadow 0.3s;
 }
+
 .feature-card:hover {
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
+
 .feature-card .card-body {
     padding: 1.5rem 1.2rem 1.2rem 1.2rem !important;
     flex: 1 1 auto;
@@ -131,9 +147,11 @@ h1, h2, h3, h4, h5, h6,
     justify-content: flex-start;
     align-items: center;
 }
+
 .feature-card i {
     margin-bottom: 1.2rem !important;
 }
+
 @media (max-width: 991.98px) {
     .feature-card {
         margin-bottom: 1.5rem !important;
@@ -147,14 +165,17 @@ h1, h2, h3, h4, h5, h6,
         font-size: 0.9rem;
         border-radius: 15px;
     }
+
     .btn-lg {
         padding: 8px 8px;
         font-size: 1rem;
     }
+
     .btn-sm {
         padding: 6px 8px;
         font-size: 0.8rem;
     }
+
     .navbar-nav .btn-primary {
         padding: 8px 20px;
         font-size: 0.9rem;
@@ -167,21 +188,24 @@ h1, h2, h3, h4, h5, h6,
     width: 100%;
     position: fixed;
     z-index: 1050;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     background-color: white;
     overflow-y: auto;
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
-    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.4s, visibility 0s 0.4s;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s, visibility 0s 0.4s;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
+
 .mobile-menu-overlay.open {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
-    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.4s, visibility 0s 0s;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s, visibility 0s 0s;
 }
+
 .overlay-content {
     padding-top: 100px;
     text-align: left;
@@ -190,12 +214,14 @@ h1, h2, h3, h4, h5, h6,
     box-sizing: border-box;
     max-width: 100vw;
 }
+
 @media (max-width: 575.98px) {
     .overlay-content {
         padding-left: 10px;
         padding-right: 10px;
     }
 }
+
 .overlay-content a {
     padding: 16px;
     text-decoration: none;
@@ -208,9 +234,11 @@ h1, h2, h3, h4, h5, h6,
     word-break: break-word;
     overflow-wrap: break-word;
 }
+
 .overlay-content a:active {
     background-color: var(--ripple-color);
 }
+
 .mobile-menu-overlay .close-btn {
     position: absolute;
     top: 25px;
@@ -223,11 +251,16 @@ h1, h2, h3, h4, h5, h6,
     cursor: pointer;
     padding: 5px;
 }
-.body-no-scroll { overflow: hidden; }
+
+.body-no-scroll {
+    overflow: hidden;
+}
+
 @media (max-width: 991.98px) {
     #desktopNav {
         display: none !important;
     }
+
     .mobile-menu-overlay {
         display: block;
     }
@@ -235,7 +268,7 @@ h1, h2, h3, h4, h5, h6,
 
 /* --- HERO SECTION --- */
 .hero-section {
-    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('../images/herobg.webp') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero3.jpg') no-repeat center center;
     background-size: cover;
     min-height: 100vh;
     color: white;
@@ -243,64 +276,73 @@ h1, h2, h3, h4, h5, h6,
     align-items: center;
     justify-content: center;
 }
+
 .hero-section .container {
     position: flex;
     z-index: 1;
     justify-content: center;
     align-items: center;
 }
+
 .hero-title {
     font-weight: 700;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     padding-left: 100px;
     padding-right: 100px;
 }
+
 @media screen and (max-width: 767.98px) {
     .hero-title {
         font-size: 2em;
         font-weight: 600;
-        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         padding-left: 20px;
         padding-right: 20px;
     }
+
     .hero-subtitle {
         max-width: 600px;
-        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         opacity: 1;
         padding-left: 10px;
         padding-right: 10px;
     }
+
     .hero-section {
         min-height: 420px;
     }
-}    
+}
+
 .hero-subtitle {
     max-width: 600px;
     opacity: 1;
     padding-left: 50px;
     padding-right: 50px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* --- BOTONES --- */
 .btn {
-    margin-top: 5px;    
+    margin-top: 5px;
     padding: 12px 12px;
     border-radius: 10px;
     font-weight: 600;
     transition: all 0.3s ease;
     border: 2px solid transparent;
 }
+
 .btn-primary {
     background-color: var(--primary-green);
     border-color: var(--primary-green);
     color: white;
 }
+
 .btn-primary:hover {
     background-color: #00697b;
     border-color: #00697b;
     transform: translateY(-3px);
 }
+
 .btn-read-more {
     background-color: #fcc82d;
     color: var(--primary-green);
@@ -308,15 +350,18 @@ h1, h2, h3, h4, h5, h6,
     border-radius: 50px;
     padding: 12px 32px;
 }
+
 .btn-read-more:hover {
     background-color: #eab41c;
     color: #003828;
     transform: translateY(-3px);
 }
+
 .section-title {
     font-weight: 700;
     color: var(--text-dark);
 }
+
 .bg-light {
     background-color: var(--light-bg) !important;
 }
@@ -330,6 +375,7 @@ h1, h2, h3, h4, h5, h6,
     justify-content: center;
     align-items: center;
 }
+
 .partner-logo-wrapper-v {
     width: 180px;
     display: flex;
@@ -337,6 +383,7 @@ h1, h2, h3, h4, h5, h6,
     align-items: center;
     padding: 1rem;
 }
+
 .partner-logo {
     max-width: 100%;
     max-height: 100%;
@@ -345,6 +392,7 @@ h1, h2, h3, h4, h5, h6,
     filter: grayscale(5%);
     transition: all 0.3s;
 }
+
 .partner-logo:hover {
     opacity: 1;
     filter: grayscale(0%);
@@ -364,7 +412,8 @@ h1, h2, h3, h4, h5, h6,
     z-index: 1000;
     cursor: pointer;
 }
-@media screen and (max-width: 767.98px){
+
+@media screen and (max-width: 767.98px) {
     .scroll-indicator {
         display: none;
     }
@@ -375,11 +424,24 @@ h1, h2, h3, h4, h5, h6,
     color: #f9f9f9;
     animation: scrollMouse 2s infinite ease-in-out;
 }
+
 @keyframes scrollMouse {
-    0% { transform: translateY(0); opacity: 1;}
-    50% { transform: translateY(10px); opacity: 0.7;}
-    100% { transform: translateY(0); opacity: 1;}
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(10px);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
+
 .scroll-arrows-animation {
     font-size: 2em;
     color: #f9f9f9;
@@ -387,10 +449,22 @@ h1, h2, h3, h4, h5, h6,
     animation: scrollArrows 2s infinite ease-in-out;
     animation-delay: 0.5s;
 }
+
 @keyframes scrollArrows {
-    0% { transform: translateY(0); opacity: 1;}
-    50% { transform: translateY(15px); opacity: 0;}
-    100% { transform: translateY(0); opacity: 1;}
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* --- SCROLL TO TOP BUTTON --- */
@@ -410,14 +484,16 @@ h1, h2, h3, h4, h5, h6,
     cursor: pointer;
     padding: 0;
     border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s, opacity 0.3s;
     opacity: 0;
     pointer-events: none;
 }
+
 .scroll-to-top-btn:hover {
     background-color: #e6c500;
 }
+
 .scroll-to-top-btn.show {
     opacity: 1;
     pointer-events: auto;
@@ -429,6 +505,7 @@ h1, h2, h3, h4, h5, h6,
     border-radius: 1rem;
     border: none;
 }
+
 .contact-option {
     background-color: #f8f9fa;
     border: 1px solid #e9ecef;
@@ -441,18 +518,22 @@ h1, h2, h3, h4, h5, h6,
     flex-direction: column;
     justify-content: center;
 }
+
 .contact-option:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
     border-color: #dee2e6;
 }
+
 .contact-option i {
     font-size: 2.5rem;
     color: var(--primary-green);
 }
+
 .contact-option .btn:hover i {
     color: white;
 }
+
 .contact-option .btn {
     border-radius: 15px;
     padding: 0.5rem 1.5rem;
@@ -468,20 +549,22 @@ h1, h2, h3, h4, h5, h6,
     background-color: #f8f9fa;
     text-align: center;
     box-sizing: border-box;
-    
+
 }
+
 .page-header .page-title {
     font-size: 2.6rem;
     font-weight: 600;
     margin-top: 0.5rem;
     margin-bottom: 1rem;
     color: var(--text-dark);
-    
+
 }
+
 .page-header .lead {
     max-width: 700px;
     font-weight: 400;
-    
+
 }
 
 /* --- BREADCRUMB --- */
@@ -489,21 +572,25 @@ h1, h2, h3, h4, h5, h6,
     background-color: transparent;
     padding: 0;
     margin-bottom: 0;
-    
+
 }
+
 .breadcrumb-item a {
     color: #6c757d;
     text-decoration: none;
     transition: color 0.2s;
 }
+
 .breadcrumb-item a:hover {
     color: var(--primary, #f39c12);
 }
+
 .breadcrumb-item.active {
     color: #343a40;
     font-weight: 600;
 }
-.breadcrumb-item + .breadcrumb-item::before {
+
+.breadcrumb-item+.breadcrumb-item::before {
     color: #6c757d;
     content: ">";
 }
@@ -518,56 +605,71 @@ h1, h2, h3, h4, h5, h6,
     margin-bottom: 0.5rem;
     text-transform: uppercase;
 }
+
 .product-title {
     font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 1rem;
     color: var(--text-dark, #2E7D32);
 }
+
 .product-image-shadow {
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
+
 .product-image-shadow:hover {
     transform: scale(1.03);
 }
+
 .stretched-link::after {
     position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     z-index: 1;
     content: "";
 }
+
 .btn-outline-primary {
     color: #003a46;
     border-color: #003a46;
 }
+
 .btn-outline-primary:hover,
 .btn-outline-primary:active {
     color: #fff;
     background-color: #003a46 !important;
     border-color: #003a46;
 }
+
 .btn-outline-primary:focus {
-    box-shadow: 0 0 0 0.25rem rgba(46,125,50,0.5);
+    box-shadow: 0 0 0 0.25rem rgba(46, 125, 50, 0.5);
 }
 
 /* --- WHATSAPP WIDGET --- */
 .floating-widget-container {
     position: fixed;
-    bottom: 95px; /* Posición más baja para el botón de WhatsApp */
-    right: 10px; /* Alineado a la derecha */
+    bottom: 95px;
+    /* Posición más baja para el botón de WhatsApp */
+    right: 10px;
+    /* Alineado a la derecha */
     z-index: 1050;
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Alinea los elementos a la derecha */
+    align-items: flex-end;
+    /* Alinea los elementos a la derecha */
     gap: 0.75rem;
     pointer-events: none;
 }
+
 .floating-widget-container .whatsapp-trigger-btn,
 .floating-widget-container .scroll-to-top-btn,
 .floating-widget-container .whatsapp-chat-box {
     pointer-events: auto;
 }
+
 .whatsapp-trigger-btn {
     height: 50px;
     width: 50px;
@@ -579,33 +681,43 @@ h1, h2, h3, h4, h5, h6,
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: transform 0.2s;
 }
+
 .whatsapp-trigger-btn:hover {
     transform: scale(1.1);
 }
+
 .whatsapp-chat-box {
     width: 350px;
     background: white;
     border-radius: 15px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
     overflow: hidden;
-    position: absolute; /* Cambiado de relative a absolute */
-    right: 70px; /* Posiciona a la izquierda del botón de WhatsApp */
-    bottom: 0; /* Alinea con la parte inferior del contenedor */
+    position: absolute;
+    /* Cambiado de relative a absolute */
+    right: 70px;
+    /* Posiciona a la izquierda del botón de WhatsApp */
+    bottom: 0;
+    /* Alinea con la parte inferior del contenedor */
     opacity: 0;
     visibility: hidden;
-    transform: translateX(20px); /* Animación de entrada desde la derecha */
-    transition: all 0.3s ease-out; /* Transición más suave */
+    transform: translateX(20px);
+    /* Animación de entrada desde la derecha */
+    transition: all 0.3s ease-out;
+    /* Transición más suave */
 }
+
 .whatsapp-chat-box.show {
     opacity: 1;
     visibility: visible;
-    transform: translateX(0); /* Vuelve a su posición normal */
+    transform: translateX(0);
+    /* Vuelve a su posición normal */
     z-index: 99999;
 }
+
 .chat-header {
     background-color: #075E54;
     color: white;
@@ -614,17 +726,44 @@ h1, h2, h3, h4, h5, h6,
     align-items: center;
     gap: 0.75rem;
 }
-.chat-logo { height: 40px; }
-.chat-info { display: flex; flex-direction: column; }
-.chat-title { font-weight: 700; }
-.chat-status { font-size: 0.8rem; opacity: 0.9; }
-.chat-close-btn { background: none; border: none; color: white; font-size: 1.5rem; margin-left: auto; cursor: pointer; }
+
+.chat-logo {
+    height: 40px;
+}
+
+.chat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-title {
+    font-weight: 700;
+}
+
+.chat-status {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+.chat-close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    margin-left: auto;
+    cursor: pointer;
+}
+
 .chat-body {
     padding: 1rem;
     background-color: #E5DDD5;
     background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
 }
-.chat-link { text-decoration: none; }
+
+.chat-link {
+    text-decoration: none;
+}
+
 .message {
     background-color: #DCF8C6;
     padding: 0.75rem;
@@ -633,6 +772,7 @@ h1, h2, h3, h4, h5, h6,
     color: #303030;
     position: relative;
 }
+
 .message.received::after {
     content: '';
     position: absolute;
@@ -645,20 +785,25 @@ h1, h2, h3, h4, h5, h6,
     border-left: 0;
     border-top: 0;
 }
+
 /* --- WHATSAPP WIDGET: FULL-WIDTH MOBILE VIEW --- */
 @media (max-width: 767.98px) {
     .whatsapp-chat-box {
         /* Posicionamiento y dimensiones */
-        position: fixed; /* Cambiado a fixed para móvil */
+        position: fixed;
+        /* Cambiado a fixed para móvil */
         bottom: 0;
         left: 0;
         width: 100%;
-        max-width: 100%; /* Sobrescribe el max-width de escritorio */
-        right: auto; /* Deshabilita el right para móvil */
-        
+        max-width: 100%;
+        /* Sobrescribe el max-width de escritorio */
+        right: auto;
+        /* Deshabilita el right para móvil */
+
         /* Estilo visual */
-        border-radius: 15px 15px 0 0; /* Redondea solo las esquinas superiores */
-        
+        border-radius: 15px 15px 0 0;
+        /* Redondea solo las esquinas superiores */
+
         /* Animación para deslizar desde abajo */
         transform: translateY(100%);
         transition: transform 0.3s ease-in-out;
@@ -668,6 +813,7 @@ h1, h2, h3, h4, h5, h6,
         transform: translateY(0);
     }
 }
+
 /* --- WHATSAPP WIDGET: FULL-WIDTH MOBILE VIEW --- */
 @media (max-width: 767.98px) {
     .whatsapp-chat-box {
@@ -676,11 +822,13 @@ h1, h2, h3, h4, h5, h6,
         bottom: 0;
         left: 0;
         width: 100%;
-        max-width: 100%; /* Sobrescribe el max-width de escritorio */
-        
+        max-width: 100%;
+        /* Sobrescribe el max-width de escritorio */
+
         /* Estilo visual */
-        border-radius: 15px 15px 0 0; /* Redondea solo las esquinas superiores */
-        
+        border-radius: 15px 15px 0 0;
+        /* Redondea solo las esquinas superiores */
+
         /* Animación para deslizar desde abajo */
         transform: translateY(100%);
         transition: transform 0.3s ease-in-out;
@@ -689,7 +837,7 @@ h1, h2, h3, h4, h5, h6,
     .whatsapp-chat-box.show {
         transform: translateY(0);
     }
-    
+
     .floating-widget-container {
         /* Ajusta la posición de los botones flotantes en móvil */
         bottom: 95px;
@@ -698,8 +846,8 @@ h1, h2, h3, h4, h5, h6,
 
     .scroll-to-top-btn {
         /* Ajusta la posición del botón de scroll para que no se superponga */
-       bottom: 160px;
-       right: 10px;
+        bottom: 160px;
+        right: 10px;
     }
 }
 
@@ -711,32 +859,38 @@ h1, h2, h3, h4, h5, h6,
     padding: 20px;
     border-radius: 240px 80px;
 }
+
 .image-wrapper-climate img {
     display: block;
     max-width: 100%;
     height: auto;
     border-radius: 220px 60px;
 }
+
 .benefit-item i {
     font-size: 5.5rem;
     color: var(--primary-green);
     margin-bottom: 1rem;
 }
+
 .badge.bg-primary-soft {
     background-color: #e8f5e9;
     padding: 0.5em 1em;
     font-weight: 600;
     letter-spacing: 0.5px;
 }
+
 .specs-list {
     list-style: none;
     padding-left: 0;
 }
+
 .specs-list li {
     padding-left: 30px;
     position: relative;
     margin-bottom: 0.75rem;
 }
+
 .specs-list li::before {
     content: '\F26E';
     font-family: 'bootstrap-icons';
@@ -758,56 +912,76 @@ h1, h2, h3, h4, h5, h6,
     font-size: 0.9rem;
     font-weight: 600;
 }
+
 .footer h5 {
     color: #fff;
     margin-bottom: 20px;
     font-weight: 600;
 }
-.footer ul { list-style: none; padding: 0; }
-.footer ul li { margin-bottom: 10px; }
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
 .footer ul li a {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s;
     opacity: 1;
 }
-.footer ul li a:hover { opacity: 0.8; }
+
+.footer ul li a:hover {
+    opacity: 0.8;
+}
+
 .footer .social-icons a {
     color: #fff;
     font-size: 1.5rem;
     margin-right: 15px;
 }
+
 /* 1. Elimina border-radius en el footer solo en mobile */
 @media (max-width: 767.98px) {
     .footer {
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
+
     .footer .col-lg-4 img {
         margin: 0 auto;
     }
 }
-  
-  /* 2. Sólo oculta overflow-x en mobile */
-  @media (max-width: 991.98px) {
-    html, body {
-      overflow-x: hidden;
-      max-width: 100vw;
+
+/* 2. Sólo oculta overflow-x en mobile */
+@media (max-width: 991.98px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+        max-width: 100vw;
     }
-  }
-  
-  /* 3. Fix para modals Bootstrap (en todos los tamaños) */
-  body.modal-open {
-      padding-right: 0 !important;
-  }
-  body.modal-open .navbar.fixed-top {
-      padding-right: 0 !important;
-  }
+}
+
+/* 3. Fix para modals Bootstrap (en todos los tamaños) */
+body.modal-open {
+    padding-right: 0 !important;
+}
+
+body.modal-open .navbar.fixed-top {
+    padding-right: 0 !important;
+}
+
 /* --- Estilos para la Sección de Testimonios (Diseño Flotante) --- */
 
 /* El contenedor de cada testimonio en el carrusel */
 .testimonial-item-floating {
-    text-align: center; /* Centramos todo el contenido */
+    text-align: center;
+    /* Centramos todo el contenido */
     padding: 1rem;
     min-height: 380px;
     display: flex;
@@ -822,9 +996,10 @@ h1, h2, h3, h4, h5, h6,
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 1.5rem; /* Espacio debajo del avatar */
+    margin-bottom: 1.5rem;
+    /* Espacio debajo del avatar */
     border: 4px solid white;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* La cita del testimonio, ahora centrada */
@@ -834,7 +1009,8 @@ h1, h2, h3, h4, h5, h6,
     font-style: italic;
     line-height: 1.7;
     color: #343a40;
-    max-width: 650px; /* Evita que el texto sea demasiado ancho */
+    max-width: 650px;
+    /* Evita que el texto sea demasiado ancho */
     margin-left: auto;
     margin-right: auto;
 }
@@ -852,8 +1028,10 @@ h1, h2, h3, h4, h5, h6,
     position: relative;
     display: block;
     cursor: pointer;
-    margin-bottom: 1.5rem; /* Mismo margen que la imagen estática */
+    margin-bottom: 1.5rem;
+    /* Mismo margen que la imagen estática */
 }
+
 /* El ícono de Play */
 .testimonial-item-floating .play-icon {
     position: absolute;
@@ -862,14 +1040,16 @@ h1, h2, h3, h4, h5, h6,
     transform: translate(-50%, -50%);
     font-size: 3.5rem;
     color: white;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+
 /* Efectos al pasar el cursor sobre la foto del video */
 .testimonial-item-floating .testimonial-video-trigger:hover .testimonial-avatar {
     filter: brightness(0.6);
 }
+
 .testimonial-item-floating .testimonial-video-trigger:hover .play-icon {
     opacity: 1;
 }
@@ -878,14 +1058,22 @@ h1, h2, h3, h4, h5, h6,
 /* --- Estilos de Controles del Carrusel (sin cambios) --- */
 #testimonials .carousel-control-prev-icon,
 #testimonials .carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5); /* Controles un poco más sutiles */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Controles un poco más sutiles */
     border-radius: 50%;
     background-size: 50%;
 }
-#testimonials .carousel-control-prev { left: 0; }
-#testimonials .carousel-control-next { right: 0; }
+
+#testimonials .carousel-control-prev {
+    left: 0;
+}
+
+#testimonials .carousel-control-next {
+    right: 0;
+}
 
 @media (max-width: 991.98px) {
+
     #testimonials .carousel-control-prev,
     #testimonials .carousel-control-next {
         display: none;
@@ -898,63 +1086,81 @@ h1, h2, h3, h4, h5, h6,
 /* Adaptación para Dispositivos Móviles */
 @media (max-width: 767.98px) {
     .testimonial-card-flex {
-        flex-direction: column; /* Apila la foto sobre el texto */
+        flex-direction: column;
+        /* Apila la foto sobre el texto */
         gap: 1.5rem;
         padding: 1.5rem;
         min-height: auto;
     }
+
     .testimonial-content {
-        text-align: center; /* Centra el texto en móvil */
+        text-align: center;
+        /* Centra el texto en móvil */
     }
+
     .testimonial-quote {
-        border-left: none; /* Quita el borde lateral */
+        border-left: none;
+        /* Quita el borde lateral */
         padding-left: 0;
         font-size: 1.1rem;
     }
+
     #testimonials .carousel-control-prev,
     #testimonials .carousel-control-next {
-        display: none; /* Oculta las flechas en móvil para un look más limpio */
+        display: none;
+        /* Oculta las flechas en móvil para un look más limpio */
     }
 }
+
 .author-location {
     font-size: 0.9rem;
     color: #6c757d;
-    
+
     /* --- AÑADIDOS PARA ALINEACIÓN PERFECTA --- */
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 #testimonialCarousel .carousel-indicators {
-    bottom: -1.5rem; /* Mueve los indicadores 24px hacia abajo, fuera del texto */
+    bottom: -1.5rem;
+    /* Mueve los indicadores 24px hacia abajo, fuera del texto */
 }
+
 /* --- Mejora de Visibilidad para los Indicadores del Carrusel --- */
 
 /* Estilo para los indicadores inactivos */
 #testimonialCarousel .carousel-indicators button {
-    background-color: #6c757d; /* Un gris oscuro y neutro */
-    opacity: 0.5; /* Los hacemos semitransparentes */
+    background-color: #6c757d;
+    /* Un gris oscuro y neutro */
+    opacity: 0.5;
+    /* Los hacemos semitransparentes */
 }
 
 /* Estilo para el indicador del testimonio activo */
 #testimonialCarousel .carousel-indicators .active {
-    opacity: 1; /* Lo hacemos totalmente opaco */
-    background-color: var(--primary-green, #003a46); /* Tu color verde principal */
+    opacity: 1;
+    /* Lo hacemos totalmente opaco */
+    background-color: var(--primary-green, #003a46);
+    /* Tu color verde principal */
 }
+
 /* boostrapp pt4 pb4 */
 .section-spacing {
     padding-top: 30px;
     padding-bottom: 30px;
-  }
-  
+}
+
 /* Corrige posibles conflictos con Bootstrap gutter */
-.row.g-4, .row.g-5 {
+.row.g-4,
+.row.g-5 {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 1.5rem;
     margin-left: 0;
     margin-right: 0;
 }
-.display-5{
+
+.display-5 {
     font-size: 2.6rem !important;
 }
 
