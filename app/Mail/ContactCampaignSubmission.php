@@ -30,7 +30,7 @@ class ContactCampaignSubmission extends Mailable
 
         return new Envelope(
             subject: 'Nuevo Contacto BioMote' . $source,
-            to: ['info@biomote.com.py'],
+            to: ['noreply@biomote.com.py'],
             replyTo: [$this->submission->email], 
         );
     }

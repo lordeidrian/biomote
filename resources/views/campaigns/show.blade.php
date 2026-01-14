@@ -223,10 +223,13 @@
         @media (max-width: 767.98px) {
             .page-header {
                 min-height: 200px !important;
-                padding-top: calc(var(--navbar-height) + 1rem) !important;
-                padding-bottom: 1rem !important;
+                padding-top: var(--navbar-height) !important;
+                padding-bottom: 0 !important;
                 padding-left: 1.5rem !important;
                 padding-right: 1.5rem !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
             }
 
             .page-header .container {

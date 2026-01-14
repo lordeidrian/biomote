@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactCampaignSubmission;
 use App\Models\Campaign;
 use App\Models\ContactSubmission;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 
 class CampaignController extends Controller
 {
@@ -57,10 +60,10 @@ class CampaignController extends Controller
         $submission = ContactSubmission::create($validated);
 
         try {
-            \Illuminate\Support\Facades\Mail::send(new \App\Mail\ContactCampaignSubmission($submission));
+            Mail::send(new ContactCampaignSubmission($submission));
         } catch (\Exception $e) {
             // Log error or just continue, we don't want to break the user flow if mail fails
-            \Illuminate\Support\Facades\Log::error('Failed to send contact email: '.$e->getMessage());
+            Log::error('Failed to send contact email: '.$e->getMessage());
         }
 
         return back()->with('success', '¡Gracias por contactarnos! Tu mensaje ha sido recibido.');
